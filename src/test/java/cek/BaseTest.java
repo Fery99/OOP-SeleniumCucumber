@@ -11,8 +11,9 @@ public class BaseTest {
   protected void getDriver() {
     EdgeOptions options = new EdgeOptions();
     options.addArguments("--headless");
-    WebDriverManager.edgedriver().create();
+//    WebDriverManager.edgedriver().create();
     WebDriverManager.edgedriver().setup();
+    WebDriverManager.edgedriver().create();
     driver = new EdgeDriver(options);
 //    driver = WebDriverManager.edgedriver().create();
 //    WebDriver driver = WebDriverManager.chromedriver().create();
