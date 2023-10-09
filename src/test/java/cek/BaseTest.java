@@ -2,18 +2,18 @@ package cek;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class BaseTest {
   protected static WebDriver driver;
 
   protected void getDriver() {
-//    ChromeOptions options = new ChromeOptions();
-//    options.addArguments("--headless");
-//    WebDriverManager.chromedriver().setup();
-//    driver = new ChromeDriver(options);
-    driver = WebDriverManager.chromedriver().create();
+    EdgeOptions options = new EdgeOptions();
+    options.addArguments("--headless");
+    WebDriverManager.edgedriver().setup();
+    driver = new EdgeDriver(options);
+//    driver = WebDriverManager.edgedriver().create();
 //    WebDriver driver = WebDriverManager.chromedriver().create();
 //    driver.navigate().to("https://www.saucedemo.com");
 //  }
