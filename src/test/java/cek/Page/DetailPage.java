@@ -8,16 +8,17 @@ import org.openqa.selenium.WebElement;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class detaiItemPage extends BaseTest {
-    By inputPageItemSelecrion = By.xpath("<div class=\"inventory_details_price\">$29.99</div>");
-
-    public detailItemPage(WebDriver driver){
+public class DetailPage extends BaseTest {
+    By inputPageItemSelecrion = By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]");
+    public DetailPage(WebDriver driver){
         this.driver =driver;
     }
 
-    public detailItem(){
+    public void  detailItem(){
         WebElement Access = driver.findElement(inputPageItemSelecrion);
         assertTrue(Access.isDisplayed());
-        assertEquals("Sauce Labs Bike Light",Access.getText());
+        assertEquals("Sauce Labs Onesie",Access.getText());
+        System.out.println("Judul pada Item ini adalah=" + Access.getText());
     }
+
 }
