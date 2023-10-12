@@ -8,10 +8,11 @@ import org.openqa.selenium.By;
 
 public class DetailStepdefs extends BaseTest {
     DetailPage itemPage;
+
     @Then("user is on page of item selection")
     public void userIsOnPageOfItemSelection() {
-    itemPage= new DetailPage(driver);
-    itemPage.detailItem();
+        itemPage = new DetailPage(driver);
+        itemPage.detailItem();
 
     }
 
